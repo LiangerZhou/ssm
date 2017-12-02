@@ -3,9 +3,10 @@ package com.liang.mapper;
 import static org.junit.Assert.*;
 
 import java.util.List;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -15,7 +16,8 @@ import com.liang.entity.User;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext.xml")
 public class UserMapperTest {
-
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private UserMapper userMapper;
 	
@@ -52,7 +54,7 @@ public class UserMapperTest {
 	public void testGetUsers() {
 		List<User> uList = userMapper.getUsers();
 		for (User user : uList) {
-			System.out.println(user);
+			logger.info(user.toString());
 		}
 	}
 
