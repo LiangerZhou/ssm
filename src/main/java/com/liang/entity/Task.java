@@ -29,6 +29,116 @@ public class Task implements Serializable{
 	private String chargeMan;//服务质量评审人
 	private String workType;//工作类型
 	private String remark;//备注
+	public long getTaskId() {
+		return taskId;
+	}
+	public void setTaskId(long taskId) {
+		this.taskId = taskId;
+	}
+	public String getTaskName() {
+		return taskName;
+	}
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
+	}
+	public Date getCreTime() {
+		return creTime;
+	}
+	public void setCreTime(Date creTime) {
+		this.creTime = creTime;
+	}
+	public Date getEndTime() {
+		return endTime;
+	}
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
+	public Date getRealEtime() {
+		return realEtime;
+	}
+	public void setRealEtime(Date realEtime) {
+		this.realEtime = realEtime;
+	}
+	public int getWorkDays() {
+		return workDays;
+	}
+	public void setWorkDays(int workDays) {
+		this.workDays = workDays;
+	}
+	public int getWorkRatio() {
+		return workRatio;
+	}
+	public void setWorkRatio(int workRatio) {
+		this.workRatio = workRatio;
+	}
+	public int getWorkEffect() {
+		return workEffect;
+	}
+	public void setWorkEffect(int workEffect) {
+		this.workEffect = workEffect;
+	}
+	public int getWorkQua() {
+		return workQua;
+	}
+	public void setWorkQua(int workQua) {
+		this.workQua = workQua;
+	}
+	public int getWorkNorm() {
+		return workNorm;
+	}
+	public void setWorkNorm(int workNorm) {
+		this.workNorm = workNorm;
+	}
+	public int getWorkScore() {
+		return workScore;
+	}
+	public void setWorkScore(int workScore) {
+		this.workScore = workScore;
+	}
+	public int getConvertScore() {
+		return convertScore;
+	}
+	public void setConvertScore(int convertScore) {
+		this.convertScore = convertScore;
+	}
+	public String getBudgetName() {
+		return budgetName;
+	}
+	public void setBudgetName(String budgetName) {
+		this.budgetName = budgetName;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public String getChargeMan() {
+		return chargeMan;
+	}
+	public void setChargeMan(String chargeMan) {
+		this.chargeMan = chargeMan;
+	}
+	public String getWorkType() {
+		return workType;
+	}
+	public void setWorkType(String workType) {
+		this.workType = workType;
+	}
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+	@Override
+	public String toString() {
+		return "Task [taskId=" + taskId + ", taskName=" + taskName + ", creTime=" + creTime + ", endTime=" + endTime
+				+ ", realEtime=" + realEtime + ", workDays=" + workDays + ", workRatio=" + workRatio + ", workEffect="
+				+ workEffect + ", workQua=" + workQua + ", workNorm=" + workNorm + ", workScore=" + workScore
+				+ ", convertScore=" + convertScore + ", budgetName=" + budgetName + ", department=" + department
+				+ ", chargeMan=" + chargeMan + ", workType=" + workType + ", remark=" + remark + "]";
+	}
 	
 
 }

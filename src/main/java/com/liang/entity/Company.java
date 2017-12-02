@@ -14,5 +14,28 @@ public class Company implements Serializable{
 	private long cid; //id
 	private String cname; //公司简称
 	private String fullName; //公司全称
+	public long getCid() {
+		return cid;
+	}
+	public void setCid(long cid) {
+		this.cid = cid;
+	}
+	public String getCname() {
+		return cname;
+	}
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	@Override
+	public String toString() {
+		return "Company [cid=" + cid + ", cname=" + cname + ", fullName=" + fullName + "]";
+	}
 
+	
 }
