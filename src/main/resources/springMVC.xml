@@ -10,28 +10,41 @@
       http://www.springframework.org/schema/context/spring-context-4.3.xsd  
       http://www.springframework.org/schema/mvc  
       http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+	
+	<!-- 配置SpringMVC -->
+	<!-- 0、 扫描所有controller的包(与web相关的包) -->
 	<!-- scan the package and the sub package -->
 	<context:component-scan base-package="com.liang.Controller" />
 
-	<!-- don't handle the static resource -->
-	<mvc:default-servlet-handler />
-
+	<!-- 1、开启SpringMVC注解模式 -->
+	<!--简化配置：
+		(1)自动注册DefaultAnnotationHandlerMapping，AnnotationMethodHandlerAdapter
+		(2)提供一系列：数据绑定，数字和日期的format @NumberFormat,@DataTimeFormat,
+		   xml，json默认读写支持。 
+	 -->
 	<!-- if you use annotation you must configure following setting -->
 	<mvc:annotation-driven />
 
+	<!-- 2、静态资源默认serclet配置
+		(1)加入对静态资源的处理：js,gif,png
+		(2)允许使用“/”做整体映射
+     -->
+	<!-- don't handle the static resource -->
+	<mvc:default-servlet-handler />
+	
+	<!-- 3、配置jsp 显示ViewResolver -->
 	<!-- configure the InternalResourceViewResolver -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-		id="internalResourceViewResolver">
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+		<!-- <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property> --><!-- 需要使用jstl是开启 -->
 		<!-- 前缀 -->
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<!-- 后缀 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<!-- 配置json数据 -->  
-    <bean    
-        class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">    
+	<!-- 4、配置json数据 -->  
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">    
         <property name="messageConverters">    
             <list>    
                 <ref bean="mappingJackson2HttpMessageConverter" />    

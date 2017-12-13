@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>首页</title>
+	<link href="static/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="static/layui/css/layui.css" rel="stylesheet">
+	<link href="static/css/index.css" rel="stylesheet">
+	<script type="text/javascript" src="static/jQuery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="static/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/layui/layui.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div id="header" class="header">外援管理系统</div>
+	<div class="login">
+		<table class="layui-table layui-bg-gray" lay-size="lg" lay-even lay-skin="line">
+			<tr class="layui-row">
+				<td>用户名：</td>
+				<td><input id="username" class="layui-input" type="text" placeholder="请输入用户名" ></td>
+			</tr>
+			<tr class="layui-row">
+				<td>密码：</td>
+				<td><input id="password" class="layui-input" type="text" placeholder="请输入密码"></td>
+			</tr>
+			<tr>
+				<td class="layui-hidden"></td>
+				<td><button class="layui-btn layui-btn-primary" onclick="register()">注册</button></td>
+				<td><button class="layui-btn" onclick="login()">登录</button></td>
+				<td class="layui-hidden"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

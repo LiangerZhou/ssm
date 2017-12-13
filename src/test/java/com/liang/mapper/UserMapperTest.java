@@ -1,8 +1,7 @@
 package com.liang.mapper;
 
-import static org.junit.Assert.*;
-
 import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

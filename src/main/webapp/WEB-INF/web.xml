@@ -15,7 +15,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<!-- 配置applicationContext.xml和spring-mybatis.xml这两个配置文件的位置，固定写法 -->
-		<param-value>classpath:applicationContext.xml,classpath:mybatis-config.xml</param-value>
+		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
 	<!--configure the setting of springmvcDispatcherServlet and configure the mapping -->
 	<servlet>

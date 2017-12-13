@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import url(../bootstrap/bootstrap.min.css);
+@import url(../layui/css/layui.css);
+
+html{
+	background: url("../../images/SpiralSpain.jpg") no-repeat;
+	background-size: cover;
+	}
+
+body{
+	
+	height: 100%;
+    margin: 0; padding: 0;
+    background-color:transparent;
+}
+
+#header{
+	margin-top: 70px;
+	position: center;
+	text-align: center;
+	font: normal bold 50px blue sans-serif;
+    text-shadow: 5px 5px 5px #FFFFFF;
+}
+
+
+.login{
+	margin: 100px auto;
+	width: 30%
+}
+
+
+.login-table{
+	margin: 100px auto;
+}
+
+.login-table tr{
+	
+}
